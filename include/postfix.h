@@ -1,8 +1,11 @@
-// Copyright 2020 A.SHT
+// Copyright 2021 Uskova
 #ifndef INCLUDE_POSTFIX_H_
 #define INCLUDE_POSTFIX_H_
-#include <string>
 
-std::string infix2postfix(std::string infix);
+#include <iostream>
+#include <string>
+#include "MyStack.h"
+
+std::string infix2postfix(std::string input);
 
 #endif  // INCLUDE_POSTFIX_H_
