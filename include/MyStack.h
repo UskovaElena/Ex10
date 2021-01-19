@@ -6,11 +6,11 @@
 
 template <class T>
 class MyStack {
-private:
+ private:
     size_t size;
     int top_index;
     T* stack;
-public:
+ public:
     explicit MyStack(size_t);
     explicit MyStack(const MyStack&);
     ~MyStack();
@@ -46,8 +46,7 @@ template <class T>
 T MyStack<T>::get() const {
     if (!this->isEmpty()) {
         return this->stack[top_index];
-    }
-    else {
+    } else {
         return -1;  // "Empty stack!"
     }
 }
@@ -59,8 +58,7 @@ T MyStack<T>::pop() {
         this->stack[top_index] = 0;
         this->top_index -= 1;
         return res;
-    }
-    else {
+    } else {
         return -1;  // "Empty stack!"
     }
 }
@@ -71,8 +69,7 @@ int MyStack<T>::push(T val) {
         this->top_index += 1;
         this->stack[top_index] = val;
         return 0;
-    }
-    else {
+    } else {
         return -1;  // "Full stack!";
     }
 }
