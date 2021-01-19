@@ -9,7 +9,7 @@ int prioritet(char sym) {
         if ((sym == '+') || (sym == '-')) {
             pri = 2;
         } else {
-			if (sym == ')') {
+            if (sym == ')') {
                 pri = 1;
             } else {
                 if (sym == '(') {
@@ -33,7 +33,7 @@ std::string infix2postfix(std::string input) {
                 if (input[i] != '.' && input[i+1] != '.') {
                 output.push_back(' ');
                 }
-			} else {
+            } else {
                 pr_cur = prioritet(input[i]);
                 if (pr_cur == -1)
                     exit(-1);
